@@ -1,0 +1,16 @@
+<h1>Galeria</h1>
+<%= link_to "Adicionar Foto", new_photo_path, class: "btn btn-primary" %>
+
+<ul>
+  <% @photos.each do |photo| %>
+    <li>
+      <h3><%= photo.title %></h3>
+      <p><%= photo.description %></p>
+      <% if photo.image.attached? %>
+        <%= image_tag photo.image, style: "max-width: 300px;" %>
+      <% end %>
+      <%= link_to "Editar", edit_photo_path(photo), class: "btn btn-warning" %>
+      <%= link_to "Remover", photo_path(photo), method: :delete, data: { confirm: "Tem certeza?" }, class: "btn btn-danger" %>
+    </li>
+  <% end %>
+</ul>
