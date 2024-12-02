@@ -1,9 +1,35 @@
-<h1>New photo</h1>
+<h1>Adicionar Foto</h1>
 
-<%= render "form", photo: @photo %>
+<%= form_with(model: @photo, local: true, html: { multipart: true }) do |form| %>
+  <% if @photo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@photo.errors.count, "erro") %> proibiu esta foto de ser salva:</h2>
+      <ul>
+        <% @photo.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
 
-<br>
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
 
-<div>
-  <%= link_to "Back to photos", photos_path %>
-</div>
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.file_field :image %>
+    <% if @photo.image? %>
+      <div>
+        <%= image_tag @photo.image.url, class: 'img-fluid', style: 'max-width: 100%; height: auto; object-fit: cover; object-position: center;' %>
+        <%= form.check_box :remove_image %>
+        <%= form.label :remove_image, "Remover imagem" %>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

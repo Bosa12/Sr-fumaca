@@ -1,7 +1,12 @@
 class Photo < ApplicationRecord
-    has_one_attached :image
-    belongs_to :user
+  
 
-    validates :title, presence: true
-    validates :image, attached: true
+  validates :title, presence: true
+  validate :image_presence
+
+  private
+
+  def image_presence
+    errors.add(:image, "deve estar presente") unless image.present?
+  end
 end

@@ -1,6 +1,5 @@
 // Specific CSS for your home-page
 .welcome{
-  width: 50%;
   font-size: 1.3rem;
   margin-top: 2rem;
   font-family:  "Oswald", sans-serif;
@@ -11,9 +10,14 @@
   border-color: rgb(229, 235, 47);
   border-radius: 12px 5px 12px 5px;
 }
-.fotochef{
+.cheff {
+  margin-top: 2rem;
   width: 500px;
-  height: 200px;
-  display: flex;
+  height: 400px;
 
+}
+.cheff img {
+  border-radius: 50px;
+  display: flex;
+  margin-left: 3rem;
 }
