@@ -1,0 +1,17 @@
+<h1>Galeria</h1>
+<%= link_to 'Adicionar Foto', new_photo_path, class: 'btn btn-primary' %>
+<br><br>
+<div class="row">
+  <% @photos.each do |photo| %>
+    <div class="col-md-4">
+      <div class="card mb-4">
+        <%= image_tag photo.image.url, class: 'card-img-top img-fluid', style: 'object-fit: cover; object-position: center;' %>
+        <div class="card-body">
+          <h5 class="card-title"><%= photo.title %></h5>
+          <%= link_to 'Editar', edit_photo_path(photo), class: 'btn btn-secondary' %>
+          <%= link_to 'Remover', photo, method: :delete, data: { confirm: 'Tem certeza?' }, class: 'btn btn-danger' %>
+        </div>
+      </div>
+    </div>
+  <% end %>
+</div>

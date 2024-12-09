@@ -4,4 +4,4 @@ import "controllers"
 import "@popperjs/core"
 import "bootstrap"
 import 'application.js'
-
+import './custom/smooth_scroll';
