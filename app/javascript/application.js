@@ -7,3 +7,4 @@ import 'application.js'
 import './custom/smooth_scroll';
 import "@fancyapps/ui/dist/fancybox.umd.js";
 import "@fancyapps/ui/dist/fancybox.css";
+import "navbar.js";
