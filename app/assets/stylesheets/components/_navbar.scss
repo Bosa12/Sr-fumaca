@@ -2,47 +2,67 @@
   margin: o;
   padding: 0;
 }
-
-a {
+.logo{
+  display: flex;
+  align-items: center;
+  margin-left: 5rem;
+}
+.dfm{
+  display: block;
+  align-items: center;
+  font-family: lato;
+  font-size: 2rem;
+  font-weight: 700;
+  h2{
+    font-family: lato;
+    font-weight: 700;
+    font-size: 2rem;
+  }
+}
+.nav-link{
+  font-family: lato;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+a{
   font-family: sans-serif;
   text-decoration: none;
 }
 
 .navbar{
-  background: rgb(235, 235, 12);
+  background: rgb(214, 196, 1);
   padding-inline: 20px;
-  height: 80px;
+  height: 150px;
 }
 
 .nav {
   max-width: 1280px;
   height: 70px;
   margin-inline: auto;
-
   display: flex;
   justify-content: space-between;
   align-items: center;
-
 }
-.fto {
-  max-width: 90px; /* Ajuste conforme necessário */
+.fto{
+  max-width: 90px;
   height: auto;
   border-radius: 20px;
 }
 .nav-list{
-  font-size: 18px;
+  font-size: 19px;
   display: flex;
   gap: 32px;
   list-style: none;
-
   color: rgb(191, 46, 46);
   padding-block: 16px;
+
 }
 
 .nav-list a{
-  font-size: 16px;
+  font-size:18px;
   color: rgb(0, 0, 0);
   padding-block: 16px;
+
 }
 
 .hamburger{
@@ -68,7 +88,6 @@ a {
       display: block;
       z-index: 1;
     }
-
   .nav-list{
     position: fixed;
     top: 0;

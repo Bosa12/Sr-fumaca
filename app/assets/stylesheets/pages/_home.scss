@@ -10,11 +10,31 @@
   border-color: rgb(229, 235, 47);
   border-radius: 12px 5px 12px 5px;
 }
+.custom-img {
+  width: 50%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+.fa-brands{
+  font-size: 2rem;
+  color: #090808;
+ }
 .cheff {
   margin-top: 2rem;
   width: 500px;
   height: 400px;
 
+}
+.img-fron{
+  width: 50%;
+  height: 500px;
+  display: flex;
+}
+.img-front{
+  width: 50%;
+  height: 500px;
+  display: flex;
 }
 .cheff img {
   border-radius: 50px;
